@@ -44,3 +44,30 @@ This refactor is intended to land as narrow PRs:
 5. improve the lightweight DB intake layer
 
 Do not re-expand the system into a heavy planner runtime, broad repo-loading flow, or Taskmaster-style product surface.
+
+## Merge Convention
+
+For this project, merge commits should use a fixed format:
+
+- commit message: exact PR title
+- extended description: short bullet list of the changes included in the PR
+
+Keep the description concrete. Do not use generic merge text.
+
+## PR Review Convention
+
+Every PR created by Codex must be self-reviewed before handoff.
+
+Review standard:
+
+- use an advanced reviewer mindset
+- check correctness, regression risk, architecture fit, scope control, and verification quality
+- surface weaknesses directly instead of smoothing them over
+- call out what was not verified
+- do not hide future break risks just because the current slice is small
+
+If there are blocking issues, say so plainly.
+
+If there are no blocking issues, say that directly too, but do not pretend the remaining risk is zero.
+
+Codex may merge its own PRs when the implementation passes this review bar and is honestly considered merge-ready.
