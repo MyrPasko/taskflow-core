@@ -23,7 +23,7 @@ Do not start with wide repo exploration unless the packet requires it.
 - Treat `00-request.md` as raw material, `01-plan.md` as the planning layer, and `02-packet.md` as the executor truth.
 - Convert messy manager input into a small, explicit packet before execution.
 - Make architecture decisions only as needed to produce a stable packet.
-- Send Claude Code only the packet plus exact file references.
+- Send Claude Code only `02-packet.md` plus exact file references.
 - Review Claude output against acceptance criteria.
 - Update `.taskflow/tasks/<task-dir>/03-notes.md` and `04-review.md`.
 - If the manager request is weak, ask for clarification before dispatching Claude.

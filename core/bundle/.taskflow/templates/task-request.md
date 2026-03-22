@@ -33,5 +33,6 @@ Describe the issue, gap, or feature.
 ## Notes For Packet Author
 
 Turn this request into `01-plan.md` and then compress it into `02-packet.md`.
-Do not pass this raw note to the executor if a packet already exists.
+Do not pass this raw note to the executor if `02-packet.md` already exists.
 Do not pass `01-plan.md` to the executor by default either.
+Treat `02-packet.md` as the executor source of truth.

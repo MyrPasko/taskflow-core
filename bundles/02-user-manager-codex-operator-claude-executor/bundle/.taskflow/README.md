@@ -31,6 +31,8 @@ It is intentionally smaller than Taskmaster:
 
 The executor should need only one compact packet plus exact file references.
 
+`02-packet.md` is the executor source of truth.
+
 `01-plan.md` is for planning, sequencing, and task boundaries.
 
 Do not pass `00-request.md` or `01-plan.md` to the executor by default once `02-packet.md` exists.

@@ -8,7 +8,7 @@ State the exact outcome in 1-2 sentences.
 
 ## Scope
 
-- included:
+- exact scope:
 - included:
 - excluded:
 
@@ -23,15 +23,21 @@ State the exact outcome in 1-2 sentences.
 - path/to/file
 - path/to/file
 
-Read only these files plus directly adjacent files if required to complete the packet.
+Read only these files plus directly adjacent files only if strictly required to complete the packet.
 
-## Constraints
+## Non-Goals
 
 - do not redesign architecture unless blocked
 - do not expand scope
-- keep changes focused
+- do not widen context unless blocked
 
-## Verification
+## Execution Notes
+
+- keep changes focused
+- note sequencing constraints if any
+- note handoff requirements if any
+
+## Verification Commands
 
 ```bash
 # exact commands to run
