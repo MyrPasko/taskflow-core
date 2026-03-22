@@ -26,24 +26,54 @@ sed "s/{{SOURCE_NAME}}/$SOURCE_NAME/g" "$TEMPLATE_DIR/db-source.md" > "$SOURCE_D
 cat > "$SOURCE_DIR/02-schema-notes.md" <<'EOF'
 # Schema Notes
 
-## Tables
+## Schemas
 
-- table:
+- schema:
 
-## Keys
+## Core Tables Or Views
 
-- primary:
-- foreign:
+- table or view:
+- purpose:
+
+## Keys And Joins
+
+- primary keys:
+- foreign keys:
+- common joins:
+
+## Sensitive Fields
+
+- pii:
+- financial:
+- secrets or tokens:
+
+## Query Boundaries
+
+- default filters:
+- time windows:
+- row-count cautions:
 
 ## Useful Paths
 
 - migrations:
 - ORM schema:
 - dashboards:
+- data dictionary:
 EOF
 cat > "$SOURCE_DIR/03-safe-queries.sql" <<'EOF'
 -- Place approved read-only queries here.
 -- Keep destructive statements out of this file.
+-- For each query, include:
+--   - purpose
+--   - expected parameters
+--   - required filters or limits
+--   - risk notes for large scans or sensitive data
+
+-- Example:
+-- purpose: daily active users for the last 7 days
+-- params: :start_date, :end_date
+-- boundaries: grouped by day, no raw user export
+-- risk: full scan if event_date index is missing
 EOF
 sed "s/{{SOURCE_NAME}}/$SOURCE_NAME/g" "$TEMPLATE_DIR/db-work-request.md" > "$SOURCE_DIR/04-work-request.md"
 
