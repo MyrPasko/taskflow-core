@@ -43,6 +43,15 @@ Install a mode from the normalized source layout:
 
 Use `--force` to overwrite an existing pipeline install.
 
+## Repo Verification
+
+These checks are for maintainers of this workflow system, not for installed projects:
+
+- `./scripts/verify-bundle-installers.sh`: compare each legacy bundle installer against `scripts/install-mode.sh`
+- `./scripts/check-stale-artifact-refs.sh`: fail on references to legacy `bundles/*/bundle/*` payload paths outside those payload directories
+- `./scripts/smoke-new-task.sh`: verify new task scaffolding still creates the expected task files
+- `./scripts/verify-repo.sh`: run the full lightweight verification suite
+
 ## Refactor Policy
 
 This refactor is intended to land as narrow PRs:
