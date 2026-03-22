@@ -2,6 +2,12 @@
 
 These bundles extract the most useful ideas from this repository into smaller installable packs.
 
+They now remain as compatibility entrypoints.
+
+The shared install logic lives in:
+
+- `scripts/install-mode.sh`
+
 ## Bundles
 
 ### 1. `01-user-operator-codex-executor`
