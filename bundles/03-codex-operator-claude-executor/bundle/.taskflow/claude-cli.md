@@ -6,16 +6,16 @@ Codex is expected to interact with Claude Code through CLI using the packet only
 
 Before invoking Claude:
 
-1. ensure `01-packet.md` is current
+1. ensure `02-packet.md` is current
 2. ensure `Allowed Context` is narrow
-3. avoid sending `00-request.md`
+3. avoid sending `00-request.md` and `01-plan.md`
 
 ## Suggested Pattern
 
 - open task packet
 - ask Claude to execute exactly that packet
 - ask Claude to stop after one task
-- review Claude output against `01-packet.md`
+- review Claude output against `02-packet.md`
 
 ## Anti-Patterns
 

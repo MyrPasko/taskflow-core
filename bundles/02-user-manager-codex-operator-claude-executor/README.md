@@ -35,9 +35,10 @@ The bundle is optimized for low token use:
    ```
 
 2. Fill `00-request.md`.
-3. Ask Codex to compress it into `01-packet.md`.
-4. Let Codex send only that packet to Claude Code.
-5. Let Codex review Claude's work and update `03-review.md`.
+3. Let Codex organize the work in `01-plan.md`.
+4. Let Codex compress that plan into `02-packet.md`.
+5. Let Codex send only that packet to Claude Code.
+6. Let Codex review Claude's work and update `04-review.md`.
 
 ## Less-Important DB Layer
 

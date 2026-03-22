@@ -3,9 +3,10 @@
 Create one folder per task with:
 
 - `00-request.md`
-- `01-packet.md`
-- `02-notes.md`
-- `03-review.md`
+- `01-plan.md`
+- `02-packet.md`
+- `03-notes.md`
+- `04-review.md`
 - `status.txt`
 
 Recommended folder format:

@@ -12,8 +12,9 @@ This project uses a compact packet workflow.
 
 1. `AGENTS.md`
 2. `.taskflow/tasks/<task-dir>/00-request.md`
-3. `.taskflow/tasks/<task-dir>/01-packet.md`
-4. exact files explicitly referenced by that packet
+3. `.taskflow/tasks/<task-dir>/01-plan.md`
+4. `.taskflow/tasks/<task-dir>/02-packet.md`
+5. exact files explicitly referenced by that packet
 
 Do not start with wide repo exploration unless the packet requires it.
 
@@ -24,7 +25,7 @@ Do not start with wide repo exploration unless the packet requires it.
 - Keep Claude on a narrow execution brief.
 - Review Claude output and decide whether the packet is satisfied.
 - Escalate only business ambiguity, risky operations, or unresolved blockers.
-- Update `.taskflow/tasks/<task-dir>/02-notes.md` and `03-review.md`.
+- Update `.taskflow/tasks/<task-dir>/03-notes.md` and `04-review.md`.
 
 ## Token Economy
 
@@ -33,3 +34,4 @@ Do not start with wide repo exploration unless the packet requires it.
 - Follow path references instead of pasting long code into notes.
 - Write summaries, not transcripts.
 - Work one task at a time.
+- Do not forward `00-request.md` or `01-plan.md` to Claude if `02-packet.md` exists.

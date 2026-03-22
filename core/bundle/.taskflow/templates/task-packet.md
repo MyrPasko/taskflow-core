@@ -1,5 +1,7 @@
 # Executor Packet: {{TASK_ID}}
 
+Distill this packet from `01-plan.md`.
+
 ## Goal
 
 State the exact outcome in 1-2 sentences.

@@ -35,9 +35,10 @@ The bundle is optimized for low token use:
    ```
 
 2. Write a short request in `00-request.md`.
-3. Let Codex produce `01-packet.md`.
-4. Let Codex dispatch Claude from that packet.
-5. Let Codex review and either close or re-scope the task.
+3. Let Codex shape the work in `01-plan.md`.
+4. Let Codex produce `02-packet.md`.
+5. Let Codex dispatch Claude from that packet.
+6. Let Codex review and either close or re-scope the task.
 
 ## Less-Important DB Layer
 
