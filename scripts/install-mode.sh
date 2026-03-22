@@ -46,6 +46,8 @@ if [[ $FORCE -ne 1 ]]; then
     echo "Target already contains pipeline files. Re-run with --force to overwrite." >&2
     exit 1
   fi
+else
+  rm -rf "$TARGET/AGENTS.md" "$TARGET/CLAUDE.md" "$TARGET/.taskflow" "$TARGET/.claude"
 fi
 
 cp -R "$CORE_DIR"/. "$TARGET"/
