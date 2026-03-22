@@ -33,6 +33,16 @@ The new source layout treats them as one system with three operating modes:
 - `modes/speed/`: speed-mode overlay
 - `bundles/`: temporary legacy source layout kept during the PR split
 
+## Installation
+
+Install a mode from the normalized source layout:
+
+```bash
+./scripts/install-mode.sh <precision|prod|speed> /absolute/path/to/target-project
+```
+
+Use `--force` to overwrite an existing pipeline install.
+
 ## Refactor Policy
 
 This refactor is intended to land as narrow PRs:
