@@ -1,41 +1,17 @@
 # Execution Bundles
 
-These bundles extract the most useful ideas from this repository into smaller installable packs.
+`bundles/` now exists as a compatibility surface only.
 
-They now remain as compatibility entrypoints.
+The shared workflow logic lives in:
 
-The shared install logic lives in:
-
+- `core/`
+- `modes/`
+- `core/addons/claude-executor/`
 - `scripts/install-mode.sh`
 
-## Bundles
+Each bundle directory should contain only:
 
-### 1. `01-user-operator-codex-executor`
+- a short README
+- an `install.sh` wrapper that points at `scripts/install-mode.sh`
 
-- You: manager, operator, architect, reviewer
-- Codex: executor
-
-Use this when you want direct chat-driven execution with the strongest human control.
-
-### 2. `02-user-manager-codex-operator-claude-executor`
-
-- You: manager
-- Codex: operator, architect, reviewer
-- Claude Code: executor
-
-Use this when you want me to convert your intent into compact packets and drive Claude Code through CLI.
-
-### 3. `03-codex-operator-claude-executor`
-
-- Codex: operator, architect, reviewer
-- Claude Code: executor
-
-Use this when you want the highest autonomy with minimal user involvement.
-
-## Shared Principles
-
-- packet-first execution
-- one task per execution loop
-- exact-file context, not repo-wide dumping
-- delta notes instead of long transcripts
-- lightweight DB intake instead of a heavy integration runtime
+Do not treat `bundles/` as the source layout for packet rules, mode behavior, or DB intake logic.
