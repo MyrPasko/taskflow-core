@@ -13,3 +13,9 @@ Speed mode is the low-friction operator pipeline.
 Use this for side projects where speed is primary and quality is added without dragging in heavy process.
 
 This mode should keep packet quality high while reducing interaction overhead.
+
+## Install
+
+```bash
+./scripts/install-mode.sh speed /absolute/path/to/target-project
+```

@@ -12,3 +12,9 @@ Precision mode is the direct execution path.
 Use this when correctness and tight human control matter more than throughput.
 
 This mode should stay minimal. It is the safe baseline and training ground for packet discipline.
+
+## Install
+
+```bash
+./scripts/install-mode.sh precision /absolute/path/to/target-project
+```
