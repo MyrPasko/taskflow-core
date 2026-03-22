@@ -15,3 +15,9 @@ Only `02-packet.md` is allowed to represent Claude scope.
 `01-plan.md` organizes work for the operator.
 
 `02-packet.md` must be clean.
+
+## Mode Guardrails
+
+- strongest dispatch discipline
+- strongest verification and review discipline
+- escalate production-risk ambiguity before execution

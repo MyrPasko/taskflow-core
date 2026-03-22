@@ -27,15 +27,20 @@ The packet should contain:
 
 Keep the packet short. Aim for one screen or two, not a miniature novel.
 
+Before dispatch, confirm that the packet has exact verification commands and no unresolved production-risk ambiguity.
+
 ## 4. Dispatch
 
 Claude Code reads the packet and the exact referenced files only.
 
 Claude must not do broad architecture work unless the packet says so.
+Do not send `00-request.md` or `01-plan.md` to Claude unless the packet explicitly requires them.
 
 ## 5. Review
 
 Codex reviews result, known risks, and verification in `04-review.md`.
+
+The review must record commands run, commands not run, and any residual production risk.
 
 ## 6. Close or Re-scope
 
@@ -50,3 +55,4 @@ If not accepted, update the plan or packet instead of piling chat context on top
 - Do not paste large diffs into notes.
 - Prefer references to files and commands.
 - Split work if the packet grows too large.
+- If the packet is weak, stop and improve it instead of letting Claude infer the missing discipline.

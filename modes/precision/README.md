@@ -13,6 +13,13 @@ Use this when correctness and tight human control matter more than throughput.
 
 This mode should stay minimal. It is the safe baseline and training ground for packet discipline.
 
+## Guardrails
+
+- packet-only execution path
+- no extra operator ceremony beyond packet, notes, and review
+- lightweight but explicit verification record
+- ask for a better packet instead of improvising a redesign
+
 ## Install
 
 ```bash

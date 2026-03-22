@@ -26,6 +26,13 @@ Do not start with wide repo exploration unless the packet requires it.
 - Update `.taskflow/tasks/<task-dir>/04-review.md` with result, risks, and verification.
 - If blocked, say exactly what is missing.
 
+## Mode Guardrails
+
+- Keep overhead low: execute from the packet once it is ready.
+- Do not create new planning layers during execution.
+- Use lightweight verification, but say exactly what you ran and what you did not run.
+- If the packet is underspecified, stop and request a tighter packet instead of widening scope yourself.
+
 ## Token Economy
 
 - Prefer reading one packet over many docs.
@@ -33,3 +40,4 @@ Do not start with wide repo exploration unless the packet requires it.
 - Write summaries, not transcripts.
 - Work one task at a time.
 - Do not read `01-plan.md` unless `02-packet.md` explicitly points to it.
+- If more context is needed, request a packet update instead of widening scope alone.

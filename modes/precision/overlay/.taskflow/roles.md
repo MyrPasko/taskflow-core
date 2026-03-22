@@ -14,3 +14,9 @@ Only `02-packet.md` is allowed to represent executor scope.
 `01-plan.md` organizes work for the operator.
 
 `02-packet.md` must be clean.
+
+## Mode Guardrails
+
+- packet-only execution
+- minimal overhead once the packet is ready
+- lightweight but explicit review record

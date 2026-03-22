@@ -27,15 +27,20 @@ The packet should contain:
 
 Keep the packet short. Aim for one screen or two, not a miniature novel.
 
+In this mode, shorter packets are acceptable if the slice is local, but the packet still needs a real verification path.
+
 ## 4. Dispatch
 
 Claude Code reads the packet and the exact referenced files only.
 
 Claude must not do broad architecture work unless the packet says so.
+Do not send `00-request.md` or `01-plan.md` to Claude unless the packet explicitly requires them.
 
 ## 5. Review
 
 Codex records result, known risks, and verification in `04-review.md`.
+
+Keep review concise, but still record what was verified and any assumption made to keep speed high.
 
 ## 6. Close or Re-scope
 
@@ -49,3 +54,4 @@ If not accepted, update the plan or packet instead of piling chat context on top
 - Do not paste large diffs into notes.
 - Prefer references to files and commands.
 - Split work if the packet grows too large.
+- Do not widen executor context just because planning feels slower than execution.
