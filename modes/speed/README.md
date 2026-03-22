@@ -14,6 +14,13 @@ Use this for side projects where speed is primary and quality is added without d
 
 This mode should keep packet quality high while reducing interaction overhead.
 
+## Guardrails
+
+- keep packet-first dispatch intact even when moving quickly
+- allow compact planning and shorter review notes
+- make reasonable local assumptions when risk is small and reversible
+- still require explicit verification and residual-risk notes
+
 ## Install
 
 ```bash

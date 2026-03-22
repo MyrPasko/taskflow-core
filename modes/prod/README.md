@@ -14,6 +14,13 @@ Use this for live production codebases where quality is primary and speed is add
 
 This mode should carry the strongest guardrails around packet quality, verification, and review discipline.
 
+## Guardrails
+
+- do not dispatch without a tight packet and exact verification commands
+- escalate risky operations, production ambiguity, and scope drift before execution
+- require explicit review evidence, not just a success summary
+- prefer slower clarity over fast packet churn
+
 ## Install
 
 ```bash
