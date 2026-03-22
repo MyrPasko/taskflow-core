@@ -26,9 +26,10 @@ mkdir -p "$TASK_DIR"
 TITLE="${SLUG//-/ }"
 
 sed "s/{{TASK_ID}}/$TASK_ID/g; s/{{TITLE}}/$TITLE/g" "$TEMPLATE_DIR/task-request.md" > "$TASK_DIR/00-request.md"
-sed "s/{{TASK_ID}}/$TASK_ID/g" "$TEMPLATE_DIR/task-packet.md" > "$TASK_DIR/01-packet.md"
-sed "s/{{TASK_ID}}/$TASK_ID/g" "$TEMPLATE_DIR/task-notes.md" > "$TASK_DIR/02-notes.md"
-sed "s/{{TASK_ID}}/$TASK_ID/g" "$TEMPLATE_DIR/task-review.md" > "$TASK_DIR/03-review.md"
+sed "s/{{TASK_ID}}/$TASK_ID/g" "$TEMPLATE_DIR/task-plan.md" > "$TASK_DIR/01-plan.md"
+sed "s/{{TASK_ID}}/$TASK_ID/g" "$TEMPLATE_DIR/task-packet.md" > "$TASK_DIR/02-packet.md"
+sed "s/{{TASK_ID}}/$TASK_ID/g" "$TEMPLATE_DIR/task-notes.md" > "$TASK_DIR/03-notes.md"
+sed "s/{{TASK_ID}}/$TASK_ID/g" "$TEMPLATE_DIR/task-review.md" > "$TASK_DIR/04-review.md"
 printf "queued\n" > "$TASK_DIR/status.txt"
 
 echo "Created $TASK_DIR"

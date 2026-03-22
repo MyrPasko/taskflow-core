@@ -31,10 +31,11 @@ The bundle is optimized for low token use:
    ./.taskflow/scripts/new-task.sh TASK-001 login-flow
    ```
 
-2. Fill `00-request.md` and then compress it into `01-packet.md`.
-3. Ask Codex to execute the task from that packet only.
-4. Let Codex update `02-notes.md`.
-5. Review outcome in `03-review.md`.
+2. Fill `00-request.md`.
+3. Distill it into `01-plan.md` and then `02-packet.md`.
+4. Ask Codex to execute the task from that packet only.
+5. Let Codex update `03-notes.md`.
+6. Review outcome in `04-review.md`.
 
 ## Less-Important DB Layer
 
