@@ -16,12 +16,14 @@ Codex converts the plan into `02-packet.md`.
 
 The packet should contain:
 
-- target outcome
+- goal
 - exact scope
 - acceptance criteria
 - allowed context files
-- commands to verify
 - explicit non-goals
+- short execution notes
+- verification commands
+- deliverable
 
 Keep the packet short. Aim for one screen or two, not a miniature novel.
 

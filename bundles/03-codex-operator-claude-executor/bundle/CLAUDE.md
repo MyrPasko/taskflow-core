@@ -10,7 +10,9 @@ You are the executor for this project.
 
 ## Rules
 
-- Execute the packet exactly.
+- Execute `02-packet.md` exactly.
+- Treat `02-packet.md` as the source of truth.
+- Do not request `00-request.md` or `01-plan.md` unless blocked.
 - Do not re-plan the task unless blocked.
 - Do not scan the whole repo by default.
 - Keep implementation focused.

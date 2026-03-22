@@ -21,6 +21,7 @@ Do not start with wide repo exploration unless the packet requires it.
 ## Operator Rules
 
 - Turn rough input into a compact packet before dispatch.
+- Treat `02-packet.md` as the executor source of truth even if `01-plan.md` is broader.
 - Make only the minimum architecture decisions needed for safe execution.
 - Keep Claude on a narrow execution brief.
 - Review Claude output and decide whether the packet is satisfied.

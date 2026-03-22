@@ -18,6 +18,7 @@ Do not start with wide repo exploration unless the packet requires it.
 ## Executor Rules
 
 - Treat `02-packet.md` as the source of truth.
+- Treat `00-request.md` and `01-plan.md` as non-executor artifacts unless the packet explicitly points to them.
 - Do not redefine scope, acceptance criteria, or architecture.
 - If the packet is weak, ask for clarification instead of improvising a redesign.
 - Keep changes inside the packet boundary.
