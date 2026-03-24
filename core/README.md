@@ -6,6 +6,7 @@
 
 - `bundle/.taskflow/`: shared taskflow files, scripts, templates, task docs, and DB intake docs
 - `addons/claude-executor/`: shared Claude executor contract and CLI command docs for Claude-backed modes
+- `addons/claude-pr-workflow/`: delegated planning, implementation, and PR-loop command docs for Claude-backed PR workflows
 
 ## Boundary
 

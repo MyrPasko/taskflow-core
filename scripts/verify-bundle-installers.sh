@@ -10,6 +10,7 @@ PAIRS=(
   "precision:bundles/01-user-operator-codex-executor/install.sh"
   "prod:bundles/02-user-manager-codex-operator-claude-executor/install.sh"
   "speed:bundles/03-codex-operator-claude-executor/install.sh"
+  "delegate:bundles/04-programmer-operator-codex-claude-pr-loop/install.sh"
 )
 
 for pair in "${PAIRS[@]}"; do

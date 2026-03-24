@@ -16,3 +16,4 @@ Shared packet templates, scripts, and DB intake assets do not belong here unless
 - `precision`: direct executor mode, packet-only read path, minimal process overhead, explicit but lightweight review.
 - `prod`: strongest dispatch gate, strongest verification and review discipline, escalate risky or ambiguous work before execution.
 - `speed`: packet-first but lower friction, compact task shaping, concise review, escalate only business ambiguity or unsafe operations.
+- `delegate`: Codex owns feature decomposition and review loops, Claude owns plan drafts and implementation PRs, user gets merge-ready handoff instead of manual packet babysitting.

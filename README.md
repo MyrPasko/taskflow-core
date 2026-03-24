@@ -18,27 +18,30 @@ The old source layout treated three workflow variants as separate bundles:
 - `02-user-manager-codex-operator-claude-executor`
 - `03-codex-operator-claude-executor`
 
-The new source layout treats them as one system with three operating modes:
+The normalized source layout now supports four operating modes:
 
 - `precision`: direct user-operated execution
 - `prod`: manager -> Codex operator -> Claude executor
 - `speed`: sponsor/approver -> Codex operator -> Claude executor
+- `delegate`: programmer/operator -> Codex decomposition and review -> Claude planner/executor with PR loop
 
 ## Repository Shape
 
 - `core/`: shared assets used by every mode
 - `core/addons/claude-executor/`: shared Claude executor support for Claude-backed modes
+- `core/addons/claude-pr-workflow/`: Claude planner/PR-loop support for delegated PR workflows
 - `modes/precision/`: precision-mode overlay
 - `modes/prod/`: prod-mode overlay
 - `modes/speed/`: speed-mode overlay
-- `bundles/`: temporary legacy source layout kept during the PR split
+- `modes/delegate/`: delegated PR-loop overlay
+- `bundles/`: compatibility bundle wrappers that delegate to the normalized source layout
 
 ## Installation
 
 Install a mode from the normalized source layout:
 
 ```bash
-./scripts/install-mode.sh <precision|prod|speed> /absolute/path/to/target-project
+./scripts/install-mode.sh <precision|prod|speed|delegate> /absolute/path/to/target-project
 ```
 
 Use `--force` to overwrite an existing pipeline install.
@@ -50,6 +53,7 @@ These checks are for maintainers of this workflow system, not for installed proj
 - `./scripts/verify-bundle-installers.sh`: compare each legacy bundle installer against `scripts/install-mode.sh`
 - `./scripts/check-stale-artifact-refs.sh`: fail on references to legacy `bundles/*/bundle/*` payload paths outside those payload directories
 - `./scripts/smoke-new-task.sh`: verify new task scaffolding still creates the expected task files
+- `./scripts/smoke-new-feature.sh`: verify delegated feature scaffolding still creates the expected feature files
 - `./scripts/verify-repo.sh`: run the full lightweight verification suite
 
 ## Refactor Policy

@@ -13,7 +13,7 @@ You are the executor for this project.
 - Execute `02-packet.md` exactly.
 - Treat `02-packet.md` as the source of truth.
 - Do not request `00-request.md` or `01-plan.md` unless blocked.
-- Do not re-plan the task unless blocked.
+- Do not re-plan during implementation unless Codex explicitly asks for planning work.
 - Do not scan the whole repo by default.
 - Keep implementation focused.
 - Update `03-notes.md` with short deltas only.

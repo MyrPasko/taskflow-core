@@ -5,6 +5,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 CORE_DIR="$ROOT/core/bundle"
 CLAUDE_ADDON_DIR="$ROOT/core/addons/claude-executor"
+CLAUDE_PR_WORKFLOW_ADDON_DIR="$ROOT/core/addons/claude-pr-workflow"
 MODES_DIR="$ROOT/modes"
 
 FORCE=0
@@ -18,7 +19,7 @@ MODE="${1:-}"
 TARGET="${2:-}"
 
 if [[ -z "$MODE" || -z "$TARGET" ]]; then
-  echo "Usage: ./scripts/install-mode.sh [--force] <precision|prod|speed> /absolute/path/to/target-project" >&2
+  echo "Usage: ./scripts/install-mode.sh [--force] <precision|prod|speed|delegate> /absolute/path/to/target-project" >&2
   exit 1
 fi
 
@@ -26,16 +27,21 @@ MODE_DIR="$MODES_DIR/$MODE/overlay"
 
 if [[ ! -d "$MODE_DIR" ]]; then
   echo "Unknown mode: $MODE" >&2
-  echo "Supported modes: precision, prod, speed" >&2
+  echo "Supported modes: precision, prod, speed, delegate" >&2
   exit 1
 fi
 
 INCLUDE_CLAUDE_ADDON=0
+INCLUDE_CLAUDE_PR_WORKFLOW_ADDON=0
 case "$MODE" in
   precision)
     ;;
   prod|speed)
     INCLUDE_CLAUDE_ADDON=1
+    ;;
+  delegate)
+    INCLUDE_CLAUDE_ADDON=1
+    INCLUDE_CLAUDE_PR_WORKFLOW_ADDON=1
     ;;
 esac
 
@@ -56,6 +62,11 @@ if [[ $INCLUDE_CLAUDE_ADDON -eq 1 ]]; then
   cp "$CLAUDE_ADDON_DIR/CLAUDE.md" "$TARGET/CLAUDE.md"
   cp -R "$CLAUDE_ADDON_DIR/.claude" "$TARGET/.claude"
   cp "$CLAUDE_ADDON_DIR/.taskflow/claude-cli.md" "$TARGET/.taskflow/claude-cli.md"
+fi
+
+if [[ $INCLUDE_CLAUDE_PR_WORKFLOW_ADDON -eq 1 ]]; then
+  cp -R "$CLAUDE_PR_WORKFLOW_ADDON_DIR/.claude"/. "$TARGET/.claude/"
+  cp -R "$CLAUDE_PR_WORKFLOW_ADDON_DIR/.taskflow"/. "$TARGET/.taskflow/"
 fi
 
 cp -R "$MODE_DIR"/. "$TARGET"/
